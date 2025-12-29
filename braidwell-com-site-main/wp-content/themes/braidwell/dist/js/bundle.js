@@ -96,7 +96,7 @@ var setRoundedLogoBottomPosition = function setRoundedLogoBottomPosition() {
 var initNavigationHover = function initNavigationHover() {
   setTimeout(function() {
     var style = document.createElement('style');
-    style.textContent = '.homepage #fp-nav ul li { transition: all 0.5s ease !important; transform-origin: center center !important; } .homepage #fp-nav ul li:hover { height: 7rem !important; } .logo-rounded, .logo-rounded:hover { transform: none !important; }';
+    style.textContent = '.homepage #fp-nav ul li { transition: all 0.5s ease !important; transform-origin: center center !important; } .homepage #fp-nav ul li:hover { height: 7rem !important; }';
     document.head.appendChild(style);
     console.log('Navigation hover styles injected');
   }, 100);
