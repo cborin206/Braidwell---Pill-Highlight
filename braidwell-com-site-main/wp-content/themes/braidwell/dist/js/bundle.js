@@ -95,20 +95,10 @@ var setRoundedLogoBottomPosition = function setRoundedLogoBottomPosition() {
 
 var initNavigationHover = function initNavigationHover() {
   setTimeout(function() {
-    var navItems = document.querySelectorAll('#fp-nav ul li a');
-    navItems.forEach(function(anchor) {
-      var span = anchor.querySelector('span:last-child');
-      if (span) {
-        span.style.transition = 'transform 0.2s ease';
-        anchor.addEventListener('mouseenter', function() {
-          span.style.transform = 'scaleY(1.15)';
-        });
-        anchor.addEventListener('mouseleave', function() {
-          span.style.transform = 'scaleY(1)';
-        });
-      }
-    });
-  }, 500);
+    var style = document.createElement('style');
+    style.textContent = '#fp-nav ul li a span { transition: transform 0.2s ease !important; } #fp-nav ul li:hover a span { transform: scaleY(1.2) !important; }';
+    document.head.appendChild(style);
+  }, 100);
 };
 
 var init = function init() {
