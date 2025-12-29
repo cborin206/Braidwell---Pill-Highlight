@@ -93,9 +93,25 @@ var setRoundedLogoBottomPosition = function setRoundedLogoBottomPosition() {
   });
 };
 
+var initNavigationHover = function initNavigationHover() {
+  setTimeout(function() {
+    var navItems = document.querySelectorAll('#fp-nav ul li a span');
+    navItems.forEach(function(span) {
+      span.style.transition = 'all 0.2s ease';
+      span.parentElement.addEventListener('mouseenter', function() {
+        span.style.height = '42px';
+      });
+      span.parentElement.addEventListener('mouseleave', function() {
+        span.style.height = '36px';
+      });
+    });
+  }, 500);
+};
+
 var init = function init() {
   initFullpage();
   setRoundedLogoBottomPosition();
+  initNavigationHover();
 };
 
 $(document).ready(function () {
